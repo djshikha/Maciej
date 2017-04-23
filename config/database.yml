@@ -1,0 +1,19 @@
+default: &default
+    adapter: postgresql
+    encoding: unicode
+    pool: 5
+    username: rails
+    password: rails
+    host:     localhost
+
+development:
+    <<: *default
+    database: dpt_development
+
+test:
+    <<: *default
+    database: dpt_test
+
+production:
+    <<: *default
+    database: dpt_production

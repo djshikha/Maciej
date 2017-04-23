@@ -1,0 +1,40 @@
+<header class="navbar navbar-fixed-top navbar-inverse">
+<nav data-turbolinks="false" role="navigation">
+  <div class="container">
+
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <%= link_to 'DPT - DeltaProjectsTools', root_path, class:'navbar-brand' %>
+    </div>
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+        
+        <li class="dropdown">
+          <a data-target="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+              Moduły<span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu">
+            <% @reports.each do |report| %>
+              <li><a><%= report.desc %> </a></li>
+            <% end %>
+<!--
+            <li><a data-target="#">ING_BARCODE_ABI</a></li>
+            <li><a data-target="#">2</a></li>
+            <li><a data-target="#">3</a></li> -->
+          </ul>
+        
+        <li><%= link_to 'Pomoc', static_pages_about_path %></li>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+</header>
+
+
